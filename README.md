@@ -18,6 +18,10 @@ kubectl top nodes
 
 kubectl top pods -n kube-system
 
+kubectl get pods output
+
+![image](./assets/kubectl-cluster.png)
+
 ### Working with multiple contexts
 
 KUBECONFIG=config-devk8s:config-prodk8s kubectl config view --merge --flatten > ~/.kube/config
