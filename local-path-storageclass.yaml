@@ -1,0 +1,7 @@
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: local-path # You will use this name in your PVCs
+provisioner: rancher.io/local-path
+reclaimPolicy: Delete # Or Retain. Delete will remove the PV and data on host when PVC is deleted.
+volumeBindingMode: WaitForFirstConsumer # Important for local storage
